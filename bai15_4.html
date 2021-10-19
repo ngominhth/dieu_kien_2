@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_hcn()
+		{
+		let chieu_dai=document.getElementById("chieu_dai").value;
+        let chieu_rong=document.getElementById("chieu_rong").value;
+		let dien_tich= chieu_dai * chieu_rong;
+		document.getElementById("hien_thi").innerHTML="Diện tích hình chữ nhật là: "+dien_tich;
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Tính diện tích hình chữ nhật</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td style="width:100px;">Nhập chiều dài: <input type="text" id="chieu_dai" size="" name=""></td>
+              
+			</tr>
+            <tr><td style="width:100px;">Nhập chiều rộng: <input type="text" id="chieu_rong" size="" name=""></td></tr>
+            <tr>
+                <td><input type="button" onclick="click_hcn()" value="Tính S"></td>
+            </tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_ptbachai()
+		{
+            
+		let heso_a=document.getElementById("heso_a").value;
+        let heso_b=document.getElementById("heso_b").value;
+        let heso_c=document.getElementById("heso_c").value;
+		let x=-heso_c/heso_b;
+        
+        if(heso_a == 0)
+        {
+			if(heso_b == 0)
+			{
+				if(heso_c == 0)
+				{
+					document.getElementById("hien_thi").innerHTML="Phương trình có vô số nghiệm";
+				}
+				else
+				{
+					document.getElementById("hien_thi").innerHTML="Phương trình vô nghiệm";
+				}
+				
+			}
+			else
+			{
+                document.getElementById("hien_thi").innerHTML="Phương trình có một nghiệm duy nhất x= "+x;
+			}
+            
+        }
+        else
+        {
+            //let delta=b**-4*a*c;
+            let delta=heso_b*heso_b-4*heso_a*heso_c;
+			let x_kep=-heso_b/2*heso_a;
+            let x1=(-heso_b + Math.sqrt(delta))/2*heso_a;
+			let x2=(-heso_b - Math.sqrt(delta))/2*heso_a;
+            if(delta > 0)
+            {
+				document.getElementById("hien_thi").innerHTML="Phương trình có hai nghiệm phân biệt x1 = "+x1+",  x2 = "+x2;
+                
+            }
+            else if(delta == 0)
+            {
+                document.getElementById("hien_thi").innerHTML="Phương trình có nghiệm kép x1 = x2 = "+x_kep;
+            }
+			else
+			{
+				document.getElementById("hien_thi").innerHTML="Phương trình vô nghiệm";
+			}
+        }
+		
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Giải phương trình bậc hai</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >Nhập hệ số a: <input type="text" id="heso_a" size="" name=""></td>
+              
+			</tr>
+            <tr><td >Nhập hệ số b: <input type="text" id="heso_b" size="" name=""></td></tr>
+            <tr><td >Nhập hệ số c: <input type="text" id="heso_c" size="" name=""></td></tr>
+            <tr>
+                <td><input type="button" onclick="click_ptbachai();" value="Tính"></td>
+            </tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

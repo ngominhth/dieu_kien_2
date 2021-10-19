@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_feet()
+		{
+		let m=document.getElementById("met").value;
+		let feet= m * 3.2808;
+		document.getElementById("hien_thi").innerHTML=m+"m = "+ feet+"ft";
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Chuyển từ mét sang feet.</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Nhập mét: <input type="text" id="met" name=""></td>
+				<td><input type="button" onclick="click_feet()" value="Chuyển sang feet"></td>
+				
+			</tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

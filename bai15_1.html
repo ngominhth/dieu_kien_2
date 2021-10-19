@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_nhietdo()
+		{
+		let nhiet_do=document.getElementById("nhiet_do").value;
+		let nhietdo_f= (9*nhiet_do)/5 + 32;
+		document.getElementById("hien_thi").innerHTML="Nhiệt độ F là "+nhietdo_f+ " <sup>0</sup>F";
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Chuyển từ độ C sang độ F.</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Nhập độ C: <input type="text" id="nhiet_do" name=""></td>
+				<td><input type="button" onclick="click_nhietdo()" value="Chuyển sang độ F" name=""></td>
+				
+			</tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_tinhgiadien()
+        {
+		let so_dien=document.getElementById("so_dien").value;
+       
+        let gia_tiendien=so_dien;
+        let thanh_tien=null;
+        if(so_dien >=0 && so_dien <=50)
+        {
+            thanh_tien=gia_tiendien*1678;
+        }
+        else if(so_dien >= 51 && so_dien <= 100)
+        {
+            thanh_tien=gia_tiendien*1734;
+        }
+        else if(so_dien >= 101 && so_dien <= 200)
+        {
+            thanh_tien=gia_tiendien*2014;
+        }
+        else if(so_dien >= 201 && so_dien <=300)
+        {
+            thanh_tien=gia_tiendien*2536;
+        }
+        else if(so_dien >=301 && so_dien <=400)
+        {
+            thanh_tien=gia_tiendien*2834;
+        }
+        else
+        {
+            thanh_tien=gia_tiendien*2927;
+        }
+       document.getElementById("hien_thi").innerHTML="Thành tiền: "+thanh_tien;
+    }
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Tính giá điện</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >Nhập số điện đã dùng: <input type="text" id="so_dien" size="" name=""></td>
+              
+			</tr>
+            
+            <tr>
+                <td><input type="button" onclick="click_tinhgiadien();" value="Tính giá điện"></td>
+            </tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

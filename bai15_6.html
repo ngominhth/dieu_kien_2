@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_ptbn()
+		{
+		let heso_a=document.getElementById("heso_a").value;
+        let heso_b=document.getElementById("heso_b").value;
+		let x=-heso_b/heso_a;
+        if(heso_a == 0 && heso_b == 0)
+        {
+            document.getElementById("hien_thi").innerHTML="Phương trình có vô số nghiệm";
+        }
+        else if(heso_a == 0 && heso_b != 0)
+        {
+            document.getElementById("hien_thi").innerHTML="Phương trình vô nghiệm";
+        }
+        else
+        {
+            document.getElementById("hien_thi").innerHTML="Phương trình có một nghiệm duy nhất: x = "+x;
+        }
+		
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Giải phương trình bậc nhất</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >Nhập hệ số a: <input type="text" id="heso_a" size="" name=""></td>
+              
+			</tr>
+            <tr><td >Nhập hệ số b: <input type="text" id="heso_b" size="" name=""></td></tr>
+            <tr>
+                <td><input type="button" onclick="click_ptbn()" value="Tính"></td>
+            </tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>

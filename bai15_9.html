@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function click_tamgiac()
+		{
+            
+		let canh_a=document.getElementById("canh_a").value;
+        let canh_b=document.getElementById("canh_b").value;
+        let canh_c=document.getElementById("canh_c").value;
+	
+            if( canh_a > 0 && canh_a > 0 && canh_c > 0 && canh_a + canh_b > canh_c && canh_b + canh_c > canh_a && canh_a + canh_b > canh_c)
+            {
+                document.getElementById("hien_thi").innerHTML="Ba cạnh vừa nhập là cạnh của tam giác";
+            }
+            else
+            {
+                document.getElementById("hien_thi").innerHTML="Ba cạnh vừa nhập không phải là cạnh của tam giác";
+            }
+        }
+        
+		
+
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+	<table>
+		<caption>Ba cạnh của tam giác</caption>
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td >Nhập canh a: <input type="text" id="canh_a" size="" name=""></td>
+              
+			</tr>
+            <tr><td >Nhập cạnh b: <input type="text" id="canh_b" size="" name=""></td></tr>
+            <tr><td >Nhập cạnh c: <input type="text" id="canh_c" size="" name=""></td></tr>
+            <tr>
+                <td><input type="button" onclick="click_tamgiac();" value="Tính"></td>
+            </tr>
+			<tr>
+				<td><p id="hien_thi"></p></td>
+			</tr>
+		</tbody>
+	</table>	
+		
+	</form>
+</body>
+</html>
